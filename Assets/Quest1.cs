@@ -1,5 +1,6 @@
 using System.Collections;
 using System.Collections.Generic;
+using UnityEngine;
 using UnityEngine.UI;
 using TMPro;
 
@@ -9,7 +10,7 @@ public class Quest1 : MonoBehaviour
     public Color completedColor;
     public Color activeColor;
 
-    public QuestArrow arrow;
+    // public QuestArrow arrow;
 
     private void OnTriggerEnter2D(Collider2D collision)
     {
