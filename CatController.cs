@@ -6,6 +6,15 @@ public class CatController : MonoBehaviour
 {
     public float speed;
     private Animator anim;
+
+    // This part of code is for dialogue with NPC
+    public GameObject dialoguePanel;
+    public Text dialoguePanel;
+    public string[] dialogue;
+    private int index;
+
+    public float wordSpeed;
+    public bool playerIsClose;
     
     void Start() 
     {
@@ -21,7 +30,27 @@ public class CatController : MonoBehaviour
         else{
             anim.SetBool("isRunning", false);
         }
-        
+        if(Input.GetKeyDown(KeyCode.E)&& playerIsClose)
+        {
+
+        }
+        else{
+            dialoguePanel.SetActive(true);
+        }
+    }
+    private void OnTriggerEnter2D(Collider2D other)
+    {
+        if(other.CompareTag("Player"))
+        {
+            playerIsClose = true;
+        }
+    }
+    private void OnTriggerExit2D(Collider2D other)
+    {
+        if(other.CompareTag("Player"))
+        {
+            playerIsClose = false;
+        }
     }
 }
 }
