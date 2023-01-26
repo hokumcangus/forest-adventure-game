@@ -32,7 +32,7 @@ public class CatController : MonoBehaviour
         }
         if(Input.GetKeyDown(KeyCode.E)&& playerIsClose)
         {
-
+            zeroText();
         }
         else{
             dialoguePanel.SetActive(true);
@@ -50,9 +50,17 @@ public class CatController : MonoBehaviour
         if(other.CompareTag("Player"))
         {
             playerIsClose = false;
+            zeroText();
         }
     }
 }
+    private void zeroText()
+    {
+        dialogueText.text = "";
+        index: 0;
+        dialoguePanel.SetActive(false);
+    }
+    IEnumerator Typing()
 }
     
     // Rigidbody2D rigidbody2d;
