@@ -2,7 +2,7 @@ using System.Collections;
 using System.Collections.Generic;
 using UnityEngine;
 
-public class CatController : MonoBehaviour
+public class KitKatsController : MonoBehaviour
 {
     public int maxHealth = 5;
     int currentHealth;
