@@ -11,8 +11,8 @@ GameObject:
   - component: {fileID: 3883373127716930455}
   - component: {fileID: 3883373127716930454}
   - component: {fileID: 4939142685591751383}
-  - component: {fileID: 5021448626560015762}
   - component: {fileID: 47188465350150340}
+  - component: {fileID: -2448166982702719285}
   m_Layer: 0
   m_Name: SnoopDog
   m_TagString: Untagged
@@ -97,7 +97,7 @@ BoxCollider2D:
   m_Enabled: 1
   m_Density: 1
   m_Material: {fileID: 0}
-  m_IsTrigger: 0
+  m_IsTrigger: 1
   m_UsedByEffector: 0
   m_UsedByComposite: 0
   m_Offset: {x: -0.33199072, y: -0.051075578}
@@ -113,7 +113,19 @@ BoxCollider2D:
   serializedVersion: 2
   m_Size: {x: 2.184144, y: 4.4013977}
   m_EdgeRadius: 0
---- !u!50 &5021448626560015762
+--- !u!114 &47188465350150340
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 3883373127716930449}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: f72ceb7a4c1b344aa86232d5603336d0, type: 3}
+  m_Name: 
+  m_EditorClassIdentifier: 
+--- !u!50 &-2448166982702719285
 Rigidbody2D:
   serializedVersion: 4
   m_ObjectHideFlags: 0
@@ -134,15 +146,3 @@ Rigidbody2D:
   m_SleepingMode: 1
   m_CollisionDetection: 0
   m_Constraints: 0
---- !u!114 &47188465350150340
-MonoBehaviour:
-  m_ObjectHideFlags: 0
-  m_CorrespondingSourceObject: {fileID: 0}
-  m_PrefabInstance: {fileID: 0}
-  m_PrefabAsset: {fileID: 0}
-  m_GameObject: {fileID: 3883373127716930449}
-  m_Enabled: 1
-  m_EditorHideFlags: 0
-  m_Script: {fileID: 11500000, guid: f72ceb7a4c1b344aa86232d5603336d0, type: 3}
-  m_Name: 
-  m_EditorClassIdentifier: 

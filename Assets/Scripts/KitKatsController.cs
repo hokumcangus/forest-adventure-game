@@ -16,14 +16,14 @@ public class KitKatsController : MonoBehaviour
     // This is the end of basic movement
 
     // This is the start of Quest behavior
-    public float speed;
+    // public float speed;
     public Animator anim;
     // This is the end of the Quest behavior
 
     // Start is called before the first frame update
     void Start()
     {
-        rigidbody2d = GetComponent<Rigidbody2D>();
+        // rigidbody2d = GetComponent<Rigidbody2D>();
         currentHealth = maxHealth;
 
     // This is the start of Quest behavior
@@ -40,7 +40,7 @@ public class KitKatsController : MonoBehaviour
         // This is the end of basic movement
 
         // Vector3 input = new Vector3(Input.GetAxisRaw("Horizontal"), Input.GetAxisRaw("Vertical"), 0);
-        // transform.positon += input.normalize; //* speed * Time.deltaTime;
+        // transform.positon += input.normalized * speed * Time.deltaTime;
 
         // if(input != Vector3.zero){
         //     anim.SetBool("isRunning", true);
