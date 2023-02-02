@@ -3,7 +3,9 @@ using System.Collections.Generic;
 using UnityEngine;
 
 public class KitKatsController : MonoBehaviour
+    
 {   
+    // public int numCarrotSeeds = 0;
     // This is the start of basic movement
     public int maxHealth = 5;
     int currentHealth;
