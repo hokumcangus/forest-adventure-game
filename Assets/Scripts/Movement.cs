@@ -2,20 +2,52 @@ using System.Collections;
 using System.Collections.Generic;
 using UnityEngine;
 
+
 public class Movement : MonoBehaviour
 {
     public float speed;
-    //get input from player
-    //apply movement to sprite
+    public Animator animator;
 
-    private void Update() 
+    private Vector3 direction;
+
+    void Start()
+    {
+        
+    }
+
+    void Update()
     {
         float horizontal = Input.GetAxisRaw("Horizontal");
         float vertical = Input.GetAxisRaw("Vertical");
 
-        Vector3 direction = new Vector3(horizontal, vertical);
-        transform.position += direction;
+        direction = new Vector3(horizontal, vertical);
 
-        transform.position += direction * speed * Time.deltaTime;
+        AnimateMovement(direction);
+
+
+    }
+
+    private void FixedUpdate() 
+    {
+        this.transform.position += direction * speed * Time.deltaTime;
+
+    }
+
+    void AnimateMovement(Vector3 direction)
+    {
+        if(animator != null)
+        {
+            if(direction.magnitude > 0)
+            {
+                animator.SetBool("isMoving", true);
+
+                animator.SetFloat("horizontal", direction.x);
+                animator.SetFloat("vertical", direction.y);
+            }
+            else
+            {
+                animator.SetBool("isMoving", false);
+            }
+        }
     }
 }
