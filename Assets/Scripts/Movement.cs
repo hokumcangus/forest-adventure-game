@@ -24,6 +24,10 @@ public class Movement : MonoBehaviour
 
         AnimateMovement(direction);
 
+        // if (DialogueManager.isActive == true)
+        //     return;
+        // }
+
 
     }
 

@@ -1,64 +1,18 @@
 using System.Collections;
 using System.Collections.Generic;
 using UnityEngine;
-using TMPro;
 
-public class Dialogue : MonoBehaviour
+[System.Serializable] public class Dialogue
 {
-    // public TextMeshProUGUI textComponent;
-    // public string[] lines;
-    // public float textSpeed;
+    // public string name;
+    // public int id;
+    // public int unhelpfulIndex;
+    // [TextArea(3, 5)] [SerializeField] public string[] greetings;
+    // [TextArea(3,5)] [SerializeField] public string askForAction;
+    // [TextArea(3, 5)] [SerializeField] public string[] playGame;
+    // [TextArea(3,5)] [SerializeField] public string goodbye;
+    
 
-    // private int index;
+    // [TextArea(3,5)] [SerializeField] string[] reactions;
 
-    // void Start()
-    // {
-    //     textComponent.text = string.Empty;
-    //     StartDialogue();
-    // }
-
-    // // Update is called once per frame
-    // void Update()
-    // {
-    //     if(Input.GetMouseButtonDown(0))
-    //     {
-    //         if(textComponent.text == lines[index])
-    //         {
-    //             NextLine();
-    //         }
-    //         else
-    //         {
-    //             StopAllCoroutines();
-    //         }
-    //     }
-    // }
-
-    // void StartDialogue()
-    // {
-    //     index = 0;
-    //     StartCoroutine(TypeLine());
-    // }
-
-    // IEnumerator TypeLine()
-    // {
-    //     foreach(char c in lines[index].ToCharArray())
-    //     {
-    //         textComponent.text += c;
-    //         yield return new WaitForSeconds(textSpeed);
-    //     }
-    // }
-
-    // void NextLine()
-    // {
-    //     if (index < lines.Length - 1)
-    //     {
-    //         index++;
-    //         textComponent.text = string.Empty;
-    //         StartCoroutine(TypeLine());
-    //     }
-    //     else
-    //     {
-    //         gameObject.SetActive(false);
-    //     }
-    // }
 }
