@@ -2,21 +2,24 @@ using System.Collections;
 using System.Collections.Generic;
 using UnityEngine;
 using UnityEngine.UI;
-// using TMPro;
+using TMPro;
 
 
-public class DialogueManager: MonoBehaviour {
+public class DialogueManager : MonoBehaviour
+{
 
-    public Text nameText;
-    public Text dialogueText;
+    // public TMP_Text nameText;
+    // public TMP_Text dialogueText;
 
     private Queue<string> sentences;
+    //private bool playerInRange = false;
 
-    void Start () {
+    void Start()
+    {
         sentences = new Queue<string>();
     }
 
-    public void StartDialogue (Dialogue dialogue)
+    public void StartDialogue(Dialogue dialogue)
     {
         Debug.Log("Stating conversation with" + dialogue.name);
 
@@ -32,7 +35,7 @@ public class DialogueManager: MonoBehaviour {
         DisplayNextSentence();
     }
 
-    public void DisplayNextSentence ()
+    public void DisplayNextSentence()
     {
         if (sentences.Count == 0)
         {
@@ -44,11 +47,26 @@ public class DialogueManager: MonoBehaviour {
         Debug.Log(sentence);
     }
 
-    void EndDialogue ()
+    void EndDialogue()
     {
         Debug.Log("End of conversation");
     }
 
+    private void OnTriggerEnter2D(Collider2D other)
+    {
+        if (other.CompareTag("Player"))
+        {
+            //playerInRange = true;
+        }
+    }
+    private void OnTriggerExit2D(Collider2D other)
+    {
+        if (other.CompareTag("Player"))
+        {
+            //playerInRange = false;
+            EndDialogue();
+        }
+    }
 }
 // public class DialogueManager : MonoBehaviour
 // {
@@ -93,7 +111,7 @@ public class DialogueManager: MonoBehaviour {
 //         }
 //     }
 //     private void Start() {
-        
+
 //     }
 
 //     private void Update() {
