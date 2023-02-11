@@ -3,14 +3,12 @@ using System.Collections.Generic;
 using UnityEngine;
 
 
-[System.Serializable]
 public class AnswersScript : MonoBehaviour
 {
     public bool isRight = false;
     public QuizManager quizManager;
 
-
-    void Answers()
+    public void Answers()
     {
         if (isRight)
         {
