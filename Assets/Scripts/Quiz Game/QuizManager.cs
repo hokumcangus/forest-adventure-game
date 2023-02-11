@@ -40,6 +40,11 @@ public class QuizManager : MonoBehaviour
         generateQuestion();
     }
 
+    public void quit()
+    {
+        QuizPanel.SetActive(false);
+        GOPanel.SetActive(false);
+    }
     public void retry()
     {
         // Getting the index of the scene and loading it
@@ -80,6 +85,7 @@ public class QuizManager : MonoBehaviour
         else
         {
             Debug.Log("Out of Questions!");
+            GameOver();
         }
     }
 }

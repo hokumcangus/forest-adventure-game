@@ -19,17 +19,18 @@ public class NewNPC : MonoBehaviour
     {
         if (Input.GetKeyDown(KeyCode.E) && playerIsClose){
 
-        if (dialoguePanel.activeInHierarchy){
-            zeroText();
-        }
-        else
-        {
-            dialoguePanel.SetActive(true);
-            StartCoroutine(Typing());
-        }
-        if (dialogueText.text == dialogue[index]) {
-            contButton.SetActive(true);
-        }
+            if (dialoguePanel.activeInHierarchy)
+            {
+                zeroText();
+            }
+            else
+            {
+                dialoguePanel.SetActive(true);
+                StartCoroutine(Typing());
+            }
+            //if (dialogueText.text == dialogue[index]) {
+            //    contButton.SetActive(true);
+            //}
         }
     }
     public void zeroText()
@@ -67,7 +68,7 @@ public class NewNPC : MonoBehaviour
     private void OnTriggerExit2D(Collider2D other) {
         if (other.CompareTag("Player")) {
             playerIsClose = false;
-            // zeroText();
+            //zeroText();
         }
     }
 }
