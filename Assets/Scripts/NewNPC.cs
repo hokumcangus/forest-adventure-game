@@ -2,11 +2,12 @@ using System.Collections;
 using System.Collections.Generic;
 using UnityEngine;
 using UnityEngine.UI;
+using TMPro;
 
 public class NewNPC : MonoBehaviour
 {
     public GameObject dialoguePanel;
-    public Text dialogueText;
+    public TMP_Text dialogueText;
     public string[] dialogue;
     private int index;
 
@@ -28,9 +29,10 @@ public class NewNPC : MonoBehaviour
                 dialoguePanel.SetActive(true);
                 StartCoroutine(Typing());
             }
-            //if (dialogueText.text == dialogue[index]) {
-            //    contButton.SetActive(true);
-            //}
+            if (dialogueText.text == dialogue[index])
+            {
+                contButton.SetActive(true);
+            }
         }
     }
     public void zeroText()
@@ -55,9 +57,10 @@ public class NewNPC : MonoBehaviour
             dialogueText.text = "";
             StartCoroutine(Typing());
         }
-        // else {
-        //     zeroText();
-        // }
+        else
+        {
+            zeroText();
+        }
     }
 
     private void OnTriggerEnter2D(Collider2D other) {
@@ -68,7 +71,7 @@ public class NewNPC : MonoBehaviour
     private void OnTriggerExit2D(Collider2D other) {
         if (other.CompareTag("Player")) {
             playerIsClose = false;
-            //zeroText();
+            zeroText();
         }
     }
 }

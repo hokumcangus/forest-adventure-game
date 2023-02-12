@@ -8,22 +8,29 @@ using TMPro;
 public class DialogueManager : MonoBehaviour
 {
 
-    // public TMP_Text nameText;
-    // public TMP_Text dialogueText;
+    public TMP_Text nameText;
+    public TMP_Text dialogueText;
+
+    //public Animator animator;
 
     private Queue<string> sentences;
-    //private bool playerInRange = false;
-
+    private bool playerInRange = false;
+ 
     void Start()
     {
+
         sentences = new Queue<string>();
+
+
     }
 
     public void StartDialogue(Dialogue dialogue)
     {
         Debug.Log("Stating conversation with" + dialogue.name);
 
-        // nameText.text = dialogue.name;
+        //animator.SetBool("IsOpen", true);
+
+        //nameText.text = dialogue.name;
 
         sentences.Clear();
 
@@ -43,27 +50,29 @@ public class DialogueManager : MonoBehaviour
             return;
         }
         string sentence = sentences.Dequeue();
-        // dialogueText.text = sentence;
+
         Debug.Log(sentence);
     }
 
     void EndDialogue()
     {
+        
         Debug.Log("End of conversation");
+        //animator.SetBool("IsOpen", false);
     }
 
     private void OnTriggerEnter2D(Collider2D other)
     {
         if (other.CompareTag("Player"))
         {
-            //playerInRange = true;
+            playerInRange = true;
         }
     }
     private void OnTriggerExit2D(Collider2D other)
     {
         if (other.CompareTag("Player"))
         {
-            //playerInRange = false;
+            playerInRange = false;
             EndDialogue();
         }
     }
