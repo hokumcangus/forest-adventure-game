@@ -26,11 +26,12 @@ public class DialogueManager : MonoBehaviour
 
     public void StartDialogue(Dialogue dialogue)
     {
-        Debug.Log("Stating conversation with" + dialogue.name);
+        //Debug.Log("Stating conversation with" + dialogue.name);
+        Debug.Log("The townsfolk need your help! Please help them!");
 
         //animator.SetBool("IsOpen", true);
 
-        //nameText.text = dialogue.name;
+        nameText.text = dialogue.name;
 
         sentences.Clear();
 
@@ -44,12 +45,14 @@ public class DialogueManager : MonoBehaviour
 
     public void DisplayNextSentence()
     {
+        
         if (sentences.Count == 0)
         {
             EndDialogue();
             return;
         }
         string sentence = sentences.Dequeue();
+        dialogueText.text = sentence;
 
         Debug.Log(sentence);
     }
