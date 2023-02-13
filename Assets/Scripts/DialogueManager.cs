@@ -3,6 +3,7 @@ using System.Collections.Generic;
 using UnityEngine;
 using UnityEngine.UI;
 using TMPro;
+using System;
 
 
 public class DialogueManager : MonoBehaviour
@@ -14,8 +15,14 @@ public class DialogueManager : MonoBehaviour
     //public Animator animator;
 
     private Queue<string> sentences;
+
     private bool playerInRange = false;
- 
+
+    public GameObject dialoguePanel;
+
+    public GameObject contButton;
+    public float wordSpeed;
+
     void Start()
     {
 
@@ -26,8 +33,7 @@ public class DialogueManager : MonoBehaviour
 
     public void StartDialogue(Dialogue dialogue)
     {
-        //Debug.Log("Stating conversation with" + dialogue.name);
-        Debug.Log("The townsfolk need your help! Please help them!");
+        Debug.Log("Stating conversation with " + dialogue.name);
 
         //animator.SetBool("IsOpen", true);
 
@@ -52,9 +58,42 @@ public class DialogueManager : MonoBehaviour
             return;
         }
         string sentence = sentences.Dequeue();
-        dialogueText.text = sentence;
+        StopAllCoroutines();
+        StartCoroutine(TypeSentence(sentence));
 
         Debug.Log(sentence);
+    }
+
+    IEnumerator TypeSentence(string sentence)
+    {
+        dialogueText.text = "";
+        foreach (char letter in sentence.ToCharArray())
+        {
+            dialogueText.text += letter;
+            yield return null;
+        }
+    }
+
+    void Update() // This function was recently added 
+    {
+        if (Input.GetKeyDown(KeyCode.E) && playerInRange)
+        {
+
+            if (dialoguePanel.activeInHierarchy)
+            {
+                sentences.Clear();
+            }
+            else
+            {
+                dialoguePanel.SetActive(true);
+                DisplayNextSentence();
+                //StartCoroutine(TypeSentence(sentences));
+            }
+            //if (dialogueText.text == dialogue[index])
+            //{
+            //    contButton.SetActive(true);
+            //}
+        }
     }
 
     void EndDialogue()
@@ -68,14 +107,15 @@ public class DialogueManager : MonoBehaviour
     {
         if (other.CompareTag("Player"))
         {
-            playerInRange = true;
+            playerInRange = false;
+            
         }
     }
     private void OnTriggerExit2D(Collider2D other)
     {
         if (other.CompareTag("Player"))
         {
-            playerInRange = false;
+            playerInRange = true;
             EndDialogue();
         }
     }
