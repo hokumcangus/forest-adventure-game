@@ -11,43 +11,41 @@ public class Quest : MonoBehaviour
     public Color completedColor;
     public Color activeColor;
     public Color currentColor;
-    
+
 
     public QuestArrow arrow;
-    // public Quest[] allQuests;
+    public Quest[] allQuests;
 
-    private void OnTriggerEnter2D(Collider2D collision) 
+    void Start()
     {
-     if(collision.tag == "Player") {
-        FinishQuest();
-        Destroy(gameObject);
-     }   
+        allQuests = FindObjectsOfType<Quest>();
     }
 
-    void FinishQuest(){
-        // questItem.GetComponent<Button>().interactable = false;
+    private void OnTriggerEnter2D(Collider2D collision)
+    {
+        if (collision.tag == "Player")
+        {
+            FinishQuest();
+            Destroy(gameObject);
+        }
+    }
+
+    void FinishQuest()
+    {
+        questItem.GetComponent<Button>().interactable = false;
         currentColor = completedColor;
         questItem.color = completedColor;
     }
 
-    // Start is called before the first frame update
-    void Start()
+    public void OnQuestClick()
     {
-        // allQuests = FindObjectOfType<Quest>();
+        //arrow.gameObject.SetActive(true);
+        arrow.target = this.transform;
+        arrow.gameObject.SetActive(false);
+        foreach (Quest quest in allQuests)
+        {
+            quest.questItem.color = quest.currentColor;
+        }
+        questItem.color = activeColor;
     }
-
-    // public void OnQuestClick(){
-    //     arrow.gameObject.SetActive(true);
-    //     arrow.target = this.transform;
-    //     arrow.gameObject.SetActive(false);
-        // foreach(Quest quest in allQuests){
-        //     quest.questItem.color = quest.currentColor;
-        // }
-        // questItem.color = activeColor;
-    }
-    // Update is called once per frame
-    // void Update()
-    // {
-        
-    // }
-
+}

@@ -20,13 +20,17 @@ public class DialogueManager : MonoBehaviour
 
     public GameObject dialoguePanel;
 
+    private bool dialoguePanelBool =  false;
+
     public GameObject contButton;
     public float wordSpeed;
 
     void Start()
     {
-
-        sentences = new Queue<string>();
+        if (dialoguePanel)
+        {
+            sentences = new Queue<string>();
+        }
 
 
     }

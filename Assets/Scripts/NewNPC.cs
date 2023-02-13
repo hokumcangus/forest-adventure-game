@@ -4,6 +4,8 @@ using UnityEngine;
 using UnityEngine.UI;
 using TMPro;
 
+// NOT USING THIS SCRIPT
+
 public class NewNPC : MonoBehaviour
 {
     public GameObject dialoguePanel;
