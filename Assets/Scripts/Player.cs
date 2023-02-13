@@ -3,12 +3,6 @@ using System.Collections.Generic;
 using UnityEngine;
 
 public class Player : MonoBehaviour
-    
-{   
-    public int numCarrotSeeds = 0;
-    // private void Update() {
-    //     if (DialogueManager.isActive == true)
-    //     return;
-    // }
-
+{
+    public int numCarrotseeds = 0;
 }
