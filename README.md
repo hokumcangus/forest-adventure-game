@@ -38,7 +38,7 @@ Learning outcomes
     Assigning array elements in Unity by dragging and dropping into the inspector.
     Create a WebGL build.
     
-=============================================================================================================
+====================================================================================================
 ABOUT ME
 
 This is my Capstone Project for the completion as a student at Ada Developers Academy.  I learned how to 
