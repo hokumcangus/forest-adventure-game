@@ -1,11 +1,14 @@
-============================================================================================================
 Forest Adventure Game
+
+============================================================================================================
+ABOUT THE GAME
 
 A text based adventure game written in C#. This is supposed to be a Multi Choice game where the 
 player can choose between 2 choices and the player is then sent on a quest.  Along the way the player can 
 collect objects to help them with the quest.
 There is also a Mini Game. It's a Guess the Riddle game with multiple answers to choose from.
-============================================================================================================
+
+=============================================================================================================
 ABOUT THE ENGINE
 
 This is a text adventure game engine, and is an unfinished game. At the moment only the  main scene is 
@@ -36,3 +39,11 @@ Learning outcomes
     Create a WebGL build.
     
 =============================================================================================================
+ABOUT ME
+
+This is my Capstone Project for the completion as a student at Ada Developers Academy.  I learned how to 
+write a program from scratch in C#. I thought there is a proud tradition of old-fashioned text games
+written in C#.  I created a game like this as I was teaching myself to code.  It was in Python. 
+
+If you want to contact me, email me at mcangusohana2@gmail.com 
+
