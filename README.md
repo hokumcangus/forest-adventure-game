@@ -1,6 +1,6 @@
 Forest Adventure Game
 
-============================================================================================================
+===================================================================================================
 ABOUT THE GAME
 
 A text based adventure game written in C#. This is supposed to be a Multi Choice game where the 
@@ -8,7 +8,7 @@ player can choose between 2 choices and the player is then sent on a quest.  Alo
 collect objects to help them with the quest.
 There is also a Mini Game. It's a Guess the Riddle game with multiple answers to choose from.
 
-=============================================================================================================
+===================================================================================================
 ABOUT THE ENGINE
 
 This is a text adventure game engine, and is an unfinished game. At the moment only the  main scene is 
@@ -18,7 +18,7 @@ immediately playable. Features in the game:
 	take		pick up item
 
 In the game there is 1 Scence with dialogue, and 1 Mini Game.
-============================================================================================================
+===================================================================================================
 
 Learning outcomes
 
