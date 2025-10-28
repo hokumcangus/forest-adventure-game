@@ -1,49 +1,52 @@
-Forest Adventure Game
+# Forest Adventure Game
 
-===================================================================================================
-ABOUT THE GAME
+## About the Game
 
-A text based adventure game written in C#. This is supposed to be a Multi Choice game where the 
-player can choose between 2 choices and the player is then sent on a quest.  Along the way the player can 
-collect objects to help them with the quest.
-There is also a Mini Game. It's a Guess the Riddle game with multiple answers to choose from.
+Forest Adventure Game is a text-based adventure written in C#. This multi-choice game lets players choose between two options and embark on quests, collecting objects to help them along the way. There's also a "Guess the Riddle" mini-game with multiple-choice answers.
 
-===================================================================================================
-ABOUT THE ENGINE
+## Features
 
-This is a text adventure game engine, and is an unfinished game. At the moment only the  main scene is 
-immediately playable. Features in the game:
+- Navigate a branching adventure with player choices
+- Collect objects to aid in quests
+- Play a riddle mini-game
+- Simple main scene and introductory dialogue
+- Learn about basic game engine architecture
 
-	walk		navigate around the world
-	take		pick up item
+## Learning Outcomes
 
-In the game there is 1 Scence with dialogue, and 1 Mini Game.
-===================================================================================================
+- High-level game design and architecture in C#
+- Introduction to Unity (Hierarchy, Scene, Game, Project, Inspector)
+- Hands-on with colliders, sprites, and state machines
+- Understanding scriptable objects and Unity serialization
+- Scene building with Tile Palette and Assets
+- Connecting C# scripts to Unity components
+- Building for WebGL
 
-Learning outcomes
+## Setup
 
-    Some high level design insight on how to create a game for other people.
-    Introduction to Unity's main windows - Hierarchy, Scene, Game, Project, -Inspector.
-    Create simple square and circle sprites also known as characters.
-    Use colliders - Box Colliders, Circle Colliders, Rigidbody 2D Body Colliders. 
-    Compare the difference between 2D and 3D scene view.
-    Build a simple platform scene for fun.
-    Create scenes using a Tile Palette, Tile maps and Assets.
-    Deeper understanding of how Unity Game Objects, Components and Properties relate to one another.
-    Learned how to connect differect C# scripts to sprites, components or buttons.
-    Introduction to SerializeField and System.Serializable. Meaning that we can edit in the Inspector.
-    What are states and what is a state machine.
-    Creating decision points for the player.
-    How to manage all of the states and conditions - scriptable objects.
-    Assigning array elements in Unity by dragging and dropping into the inspector.
-    Create a WebGL build.
-    
-====================================================================================================
-ABOUT ME
+1. **Clone the repository**
+   ```sh
+   git clone https://github.com/hokumcangus/forest-adventure-game.git
+   cd forest-adventure-game
+   ```
 
-This is my Capstone Project for the completion as a student at Ada Developers Academy.  I learned how to 
-write a program from scratch in C#. I thought there is a proud tradition of old-fashioned text games
-written in C#.  I created a game like this as I was teaching myself to code.  It was in Python. 
+2. **Open in Unity or Visual Studio**
 
-If you want to contact me, email me at mcangusohana2@gmail.com 
+   - For Unity: Open the project folder in Unity Hub.
+   - For C#: Open the solution in Visual Studio.
 
+3. **Build and Run**
+   - For Unity: Press Play in the Unity Editor.
+   - For C#: Build and run using your IDE's controls.
+
+## License
+
+This project is licensed under the MIT License. See [LICENSE](LICENSE) for details.
+
+## About Me
+
+This project was developed as a capstone for Ada Developers Academy. For questions or contact, email: mcangusohana2@gmail.com
+
+## Project Board
+
+See the GitHub project board for current tasks and progress.
